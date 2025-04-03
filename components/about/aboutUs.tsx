@@ -11,7 +11,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="bg-[#000413] text-white py-16 px-8 md:px-16 lg:px-32 flex flex-col md:flex-row items-center gap-8">
+    <section className="bg-[#000413] text-white py-16 px-8 md:px-16 lg:px-32 flex flex-col md:flex-row items-center gap-8 ">
       <div className="md:w-1/2">
         <h3 className="text-red-500 font-semibold">ABOUT US</h3>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">Why Choose Us?</h2>
