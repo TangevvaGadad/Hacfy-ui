@@ -1,55 +1,57 @@
-'use client'
+'use client';
 
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const links = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Contact Us", id: "contact" }
-  ]
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = (id: string) => {
-    setIsOpen(false)
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const socialLinks = [
+    { icon: <FaInstagram size={24} />, url: 'https://www.instagram.com/yourprofile' },
+    { icon: <FaTwitter size={24} />, url: 'https://twitter.com/yourprofile' },
+    { icon: <FaLinkedin size={24} />, url: 'https://www.linkedin.com/in/yourprofile' },
+    { icon: <FaYoutube size={24} />, url: 'https://www.youtube.com/yourchannel' },
+  ];
+
+  const navLinks = [
+    { name: 'About', url: '#about' },
+    { name: 'Contact Us', url: '#contact' },
+  ];
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-red-500 shadow-md sticky top-0 z-50 p-3">
       <div className="container mx-auto flex items-center justify-between p-4">
-        <a 
-          href="#home" 
-          className="text-2xl font-bold hover:text-blue-600 cursor-pointer"
-          onClick={() => handleNavClick('home')}
-        >
-          Logo
-        </a>
-        
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-lg font-semibold">
-          {links.map((link) => (
-            <li key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className="hover:text-blue-600 cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleNavClick(link.id)
-                }}
-              >
-                {link.name}
-              </a>
-            </li>
+        {/* Left Side: Social Icons */}
+        <div className="flex space-x-4">
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-600"
+            >
+              {link.icon}
+            </a>
           ))}
-        </ul>
+        </div>
+
+        {/* Right Side: Nav Links */}
+        <div className="flex space-x-4">
+          {navLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              className="text-white hover:text-blue-600"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -58,17 +60,25 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white shadow-md">
           <ul className="flex flex-col items-center space-y-4 p-4">
-            {links.map((link) => (
-              <li key={link.id}>
+            {navLinks.map((link, index) => (
+              <li key={index}>
                 <a
-                  href={`#${link.id}`}
-                  className="hover:text-blue-600 cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(link.id)
-                  }}
+                  href={link.url}
+                  className="text-red-500 hover:text-blue-600"
                 >
                   {link.name}
+                </a>
+              </li>
+            ))}
+            {socialLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-500 hover:text-blue-600"
+                >
+                  {link.icon}
                 </a>
               </li>
             ))}
@@ -76,5 +86,5 @@ export function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

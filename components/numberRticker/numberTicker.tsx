@@ -1,5 +1,5 @@
 import { NumberTicker } from "../magicui/number-ticker";
-
+import Image from "next/image";
 export function StatsSection() {
   return (
     <div className="flex justify-center gap-12 p-10 text-white">
@@ -13,7 +13,7 @@ export function StatsSection() {
 function StatItem({ value, label }: { value: number; label: string }) {
   return (
     <div className="h-full flex flex-col justify-between items-center text-center my-10">
-      {/* Wrapper to align the number and + sign properly */}
+    <Image src="/images/logo.webp" alt="Logo" width={150} height={100} />
       <div className="flex items-center justify-center">
        
         <NumberTicker
@@ -23,7 +23,7 @@ function StatItem({ value, label }: { value: number; label: string }) {
         />
          <span className="text-6xl font-bold text-white">+</span> {/* Increased font size */}
       </div>
-      {/* Label with increased font size */}
+     
       <span className="text-2xl font-semibold mt-4">{label}</span>
     </div>
   );

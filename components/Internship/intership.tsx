@@ -19,6 +19,12 @@ const courses = [
       "Focus on securing mobile apps by learning how to conduct penetration testing on Android and iOS platforms. This internship will cover various attack vectors and methods to safeguard mobile applications against potential threats.",
     image: "/i2.jpg",
   },
+   {
+    title: "Mobile Application Penetration Testing",
+    description:
+      "Focus on securing mobile apps by learning how to conduct penetration testing on Android and iOS platforms. This internship will cover various attack vectors and methods to safeguard mobile applications against potential threats.",
+    image: "/i2.jpg",
+  },
 ];
 
 function InternshipCard({ title, description, image }:{title:string,description:string,image:string}) {

@@ -8,6 +8,9 @@ export default function AboutUs() {
     "Community and Networking Opportunities",
     "Commitment to Continuous Improvement",
     "Ethical and Responsible Cybersecurity Education",
+
+
+    
   ];
 
   return (
