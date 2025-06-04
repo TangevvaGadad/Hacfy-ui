@@ -1,55 +1,58 @@
-import AboutUs from "@/components/about/aboutUs";
 import CareerSection from "@/components/career/career";
-import ContactForm from "@/components/contact/contact";
+import ContactUs from "@/components/contact/contact";
 import FaqSection from "@/components/faq/faq";
 import Hero from "@/components/hero/hero";
-import Internship from "@/components/Internship/intership";
 import { MarqueeDemo } from "@/components/marque/Testinomials";
 import { StatsSection } from "@/components/numberRticker/numberTicker";
-import ServiceSection from "@/components/services/service";
 import TestimonialSlider from "@/components/Testinomials/testinomials";
 import TrainingsSection from "@/components/trainings/training";
-
-
+import WhyUs from "@/components/whyus/whyus";
 
 export default function Home() {
   return (
-   <>
+    <>
       <div className="h-screen flex flex-col justify-center" id="home">
-      <Hero />
+        <Hero />
       </div>
       <div>
-      <StatsSection/>
+        <StatsSection />
+      </div>
+      <div className="mt-20">
+        <WhyUs />
       </div>
       <div>
-        <TrainingsSection/>
+        <TrainingsSection />
       </div>
+
       <div>
-        <ServiceSection/>
+        <h1 className="text-white text-5xl text-center font-bold mb-16">
+          Websites we have Secured
+        </h1>
+        <MarqueeDemo />
       </div>
-      <div>
-        <MarqueeDemo/>
+      {/* <div>
+        <ServiceSection />
       </div>
       <div className="mt-20">
         <Internship />
-      </div>
+      </div> */}
       {/* <div className="" id="about">
         <AboutUs />
       </div> */}
-     
+
       <div>
         <CareerSection />
       </div>
       <div>
         <FaqSection />
       </div>
-     
+
       <div>
-        <TestimonialSlider/>
+        <TestimonialSlider />
       </div>
       <div id="contact">
-        <ContactForm />
+        <ContactUs />
       </div>
-   </>
+    </>
   );
 }

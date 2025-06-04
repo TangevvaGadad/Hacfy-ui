@@ -1,53 +1,70 @@
-import Image from "next/image";
+import React from "react";
 
-const courses = [
-  {
-    title: "Vulnerability Assessment and Penetration Testing (VAPT)",
-    description:
-      "Launch your career in cybersecurity by mastering VAPT techniques. Learn to identify and mitigate security vulnerabilities, safeguarding organizations from both external and internal threats.",
-    image: "/i2.jpg",
-  },
-  {
-    title: "Network Defense and Operation",
-    description:
-      "Become a specialist in network security operations. Gain expertise in configuring and maintaining secure computer networks, ensuring the integrity, confidentiality, and availability of critical data.",
-    image: "/i2.jpg",
-  },
-  {
-    title: "Forensics",
-    description:
-      "Dive into digital forensics, a crucial discipline in cybersecurity. Acquire skills in recovering, analyzing, and documenting digital evidence related to cybercrime, essential for investigating and combating digital threats.",
-    image: "/i2.jpg",
-  },
-  {
-    title: "Forensics",
-    description:
-      "Dive into digital forensics, a crucial discipline in cybersecurity. Acquire skills in recovering, analyzing, and documenting digital evidence related to cybercrime, essential for investigating and combating digital threats.",
-    image: "/i2.jpg",
-  },
-];
+export default function CloudSecuritySolutions() {
+  const solutions = [
+    {
+      id: "01",
+      title: "Penetration Testing",
+      description:
+        "Continuously perform penetration testing to identify misconfigurations, vulnerabilities, and security gaps that deviate from best practices",
+      highlight: false,
+    },
+    {
+      id: "02",
+      title: "Strategic Cybersecurity and Compliance Solutions",
+      description:
+        "Continuously assess your systems and processes to identify vulnerabilities, misconfigurations, and compliance gaps, ensuring alignment with industry security standards and best practices.",
+      highlight: true,
+    },
+    {
+      id: "03",
+      title: "Digital Forensics",
+      description:
+        "Thoroughly analyze digital systems to uncover security breaches, trace malicious activities, and identify vulnerabilities or misconfigurations that deviate from expected norms and policies.",
+      highlight: false,
+    },
+    {
+      id: "04",
+      title: "HacFy Trainings",
+      description:
+        "Empower individuals through hands-on training to identify vulnerabilities, understand misconfigurations, and recognize deviations from cybersecurity best practices across real-world scenarios",
+      highlight: false,
+    },
+  ];
 
-function CareerCard({ title, description, image }:{title:string,description:string,image:string}) {
   return (
-    <div className="bg-[#0a0f1c] border border-gray-700 rounded-lg p-6 shadow-lg flex flex-col items-center text-center">
-      <Image src={image} alt={title} width={300} height={200} className="rounded-md" />
-      <h3 className="text-lg font-bold text-white mt-4">{title}</h3>
-      <p className="text-gray-400 mt-2">{description}</p>
-      
-    </div>
-  );
-}
+    <section className="min-h-screen  text-white px-8 py-16">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-5xl font-bold text-center mb-12">
+          Our Trusted Services
+        </h2>
 
-export default function TrainingsSection() {
-  return (
-    <section className="bg-[#000413] text-white py-16 px-8 md:px-16 lg:px-32">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-8">
-        HACFY OFFERS A WIDE RANGE OF POWERFUL CAREER TRACKS TO BUILD YOUR CYBERSECURITY CAREER
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {courses.map((course, index) => (
-          <CareerCard key={index} {...course} />
-        ))}
+        <div className="space-y-10 ">
+          {solutions.map((solution, index) => (
+            <div
+              key={solution.id}
+              className="flex flex-col md:flex-row justify-between items-center gap-6 border border-white rounded-lg p-10 pt-6"
+            >
+              <div className="flex-1">
+                {/* <div className="text-white font-bold text-lg">{solution.id}</div> */}
+                <h3 className={`text-2xl font-bold text-red-600`}>
+                  {solution.title}
+                </h3>
+                <p className="text-md text-gray-300 mt-2 max-w-lg">
+                  {solution.description}
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <button
+                  className={`px-6 py-2 text-sm rounded-full border 
+                    transition-colors duration-300 pb-4 hover:text-red-600 hover:border-red-600`}
+                >
+                  Read More →
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

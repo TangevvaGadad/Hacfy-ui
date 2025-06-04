@@ -20,17 +20,17 @@ export function Navbarlogo() {
         </a>
 
     
-        <div className="hidden md:flex space-x-4">
-        <a href="#about" className="text-lg font-medium text-gray-700 hover:text-gray-900">
+        <div className="hidden md:flex space-x-8">
+        <a href="#about" className="text-lg font-bold text-gray-700 hover:text-red-600  ">
           Home
           </a>
-          <a href="#about" className="text-lg font-medium text-gray-700 hover:text-gray-900">
+          <a href="#about" className="text-lg font-bold text-gray-700 hover:text-red-600">
             About
           </a>
-          <a href="#services" className="text-lg font-medium text-gray-700 hover:text-gray-900">
+          <a href="#services" className="text-lg font-bold text-gray-700 hover:text-red-600">
             Services
           </a>
-          <a href="#contact" className="text-lg font-medium text-gray-700 hover:text-gray-900">Contact</a>
+          <a href="#contact" className="text-lg font-bold text-gray-700 hover:text-red-600">Contact</a>
         </div>
 
         <Link href="https://cyberchetana.hacfy.com/" className='hidden md:block'>
@@ -108,13 +108,13 @@ export function Navbarlogo() {
               </a>
 
             
-              <a href="#about" className="text-lg font-medium text-gray-700 hover:text-gray-900">
+              <a href="#about" className="text-lg font-bold text-gray-700 hover:text-gray-900">
                 About
               </a>
-              <a href="#services" className="text-lg font-medium text-gray-700 hover:text-gray-900">
+              <a href="#services" className="text-lg font-bold text-gray-700 hover:text-gray-900">
                 Services
               </a>
-              <a href="#services" className="text-lg font-medium text-gray-700 hover:text-gray-900">
+              <a href="#services" className="text-lg font-bold text-gray-700 hover:text-gray-900">
                 Contact
               </a>
             </div>

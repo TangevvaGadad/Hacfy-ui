@@ -36,9 +36,9 @@ function CareerCard({ title, description, image }:{title:string,description:stri
 
 export default function CareerSection() {
   return (
-    <section className="bg-[#000413] text-white py-16 px-8 md:px-16 lg:px-32">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-8">
-        HACFY OFFERS A WIDE RANGE OF POWERFUL CAREER TRACKS TO BUILD YOUR CYBERSECURITY CAREER
+    <section className=" text-white py-16 px-8 md:px-16 lg:px-32">
+      <h2 className="text-center text-4xl md:text-4xl font-bold mb-8">
+    Blogs and Newsletters
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {courses.map((course, index) => (

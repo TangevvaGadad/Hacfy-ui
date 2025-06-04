@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${poppins.variable} antialiased bg-[#000413]`}
+        className={` ${poppins.variable} antialiased bg-primary`}
       >
        <div className="flex flex-col min-h-screen">
       <Navbarlogo/>

@@ -1,29 +1,34 @@
-import { Video } from "./vedio";
-
+import Image from "next/image";
+import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
     <>
-    <section className="relative w-full h-screen bg-[#000413] text-white flex items-center">
-     <Video />
-      <div className="relative z-10 px-8 md:px-16 lg:px-32">
-        <h1 className="text-5xl md:text-8xl font-bold leading-tight">
-          A FUTURE SECURED 
-        </h1>
-        <p className="mt-4 text-lg text-gray-300 max-w-2xl text-balance">
-          Empowering Your Digital Defense with Comprehensive Cybersecurity
-          Education. Our Courses cover everything from the basics to advanced
-          strategies, ensuring you're well-equipped to protect the digital world.
-        </p>
-      <div className="mt-6 flex flex-wrap gap-4">
-          <button className="bg-red-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-red-700 transition-colors duration-300">
-           Get a free cunsulation
-          </button>
-          
-      </div>
-    </div>
-    </section>
-  
+      <section className="relative w-full h-screen bg-primary text-white flex items-center">
+        <div className="relative z-10 px-8 md:px-16 lg:px-32">
+          <h1 className="text-5xl md:text-8xl font-extrabold leading-tight">
+            A FUTURE <br />
+            SECURED
+          </h1>
+          <p className="mt-4 text-lg text-gray-300 max-w-2xl text-balance">
+            Our mission is to build a safer digital world by offering end-to-end
+            cybersecurity solutions. Whether you're a student, professional,
+            startup, or enterprise, our services are tailored to meet your
+            needs. From penetration testing to comprehensive security
+            consulting, we empower individuals and organizations to defend
+            against the evolving cyber threat landscape.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button className="bg-secondary text-white hover:bg-red-600 font-bold text-md pb-4 ">
+              Get a Free consultation
+            </Button>
+          </div>
+        </div>
+
+        <div className="hidden md:block  bg-[radial-gradient(ellipse_at_center,_#ffffff_6%,_#f0f0f0_8%,_transparent_65%)] bg-cover bg-center bg-no-repeat p-4">
+          <Image src="/hero1.png" alt="hero" width={1000} height={1000} />
+        </div>
+      </section>
     </>
   );
 }
