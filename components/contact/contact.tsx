@@ -10,7 +10,7 @@ const servicesList = [
   "IoT Pentesting",
   "API pentesting",
   "Cloud security assessment",
-  "I want to partner with cyberProbex",
+  "I want to partner with HacFy",
   "Others",
 ];
 
@@ -84,12 +84,15 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-5xl  mx-auto space-y-4 p-8 mb-8"
+      className="max-w-5xl w-full mx-auto px-4 sm:px-8 py-10 space-y-6"
     >
-      <h1 className="text-white  text-center text-4xl font-bold mb-16">Connect With HacFy</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <h1 className="text-white text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
+        Connect With HacFy
+      </h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-md font-bold text-secondary pb-4">
+          <label className="block text-md font-bold text-secondary pb-2">
             Full Name
           </label>
           <input
@@ -97,12 +100,12 @@ export default function ContactUs() {
             placeholder="Enter your full name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className="w-full border p-2 rounded text-white "
+            className="w-full border border-gray-600 bg-transparent p-2 rounded text-white"
             required
           />
         </div>
         <div>
-          <label className="block text-md font-bold border-none text-secondary pb-4">
+          <label className="block text-md font-bold text-secondary pb-2">
             Work Email
           </label>
           <input
@@ -110,43 +113,32 @@ export default function ContactUs() {
             placeholder="Enter your work email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border p-2 rounded text-white"
+            className="w-full border border-gray-600 bg-transparent p-2 rounded text-white"
             required
           />
         </div>
-        <div className="mt-6">
-          <label className="block text-md font-bold text-secondary pb-4">
+        <div className="sm:col-span-2">
+          <label className="block text-md font-bold text-secondary pb-2">
             Phone Number
           </label>
-          {/* <PhoneInput
-            country={"us"}
-            value={phone}
-            onChange={(value: any) => setPhone(value)}
-            containerClass="w-full"
-            inputClass="!w-full !p-2 !rounded !bg-black !text-white !border"
-            buttonClass="!bg-black"
-          /> */}
-         <input
+          <input
             type="number"
             placeholder="Enter your phone number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full border p-2 rounded text-white"
+            className="w-full border border-gray-600 bg-transparent p-2 rounded text-white"
             required
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-md  font-bold  text-secondary mt-4 mb-2">
+        <label className="block text-md font-bold text-secondary mb-2">
           Types of services you need
         </label>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {servicesList.map((service) => (
-            <label
-              key={service}
-              className="flex items-center gap-2 p-2 rounded  text-white cursor-pointer"
-            >
+            <label key={service} className="flex items-center gap-2 text-white">
               <input
                 type="checkbox"
                 value={service}
@@ -154,30 +146,32 @@ export default function ContactUs() {
                 onChange={() => handleCheckboxChange(service)}
                 className="accent-secondary w-4 h-4"
               />
-              <span className="text-md font-semibold"> {service}</span>
+              <span className="text-sm font-medium">{service}</span>
             </label>
           ))}
         </div>
       </div>
 
       <div>
-        <label className="block text-md font-bold  text-secondary pb-4">
+        <label className="block text-md font-bold text-secondary pb-2">
           Message
         </label>
         <textarea
           placeholder="Enter your message here"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full border p-2 rounded h-28 text-white"
+          className="w-full border border-gray-600 bg-transparent p-2 rounded h-28 text-white"
         />
       </div>
 
-      <button
-        type="submit"
-        className="bg-secondary text-white font-bold px-6 py-2 rounded shadow transition pb-2"
-      >
-        {status || "Send Message"}
-      </button>
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="bg-secondary hover:bg-opacity-90 transition text-white font-bold px-8 py-2 rounded w-full sm:w-auto"
+        >
+          {status || "Send Message"}
+        </button>
+      </div>
     </form>
   );
 }
