@@ -84,9 +84,9 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full mx-auto bg-black rounded-lg shadow-md space-y-4 border-t-2 border-white p-8 "
+      className="w-5xl  mx-auto space-y-4 p-8 mb-8"
     >
-      <h1 className="text-white text-center text-4xl font-bold mb-16">Connect With HacFy</h1>
+      <h1 className="text-white  text-center text-4xl font-bold mb-16">Connect With HacFy</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-md font-bold text-secondary pb-4">
@@ -97,7 +97,7 @@ export default function ContactUs() {
             placeholder="Enter your full name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className="w-full border p-2 rounded text-white"
+            className="w-full border p-2 rounded text-white "
             required
           />
         </div>
@@ -145,7 +145,7 @@ export default function ContactUs() {
           {servicesList.map((service) => (
             <label
               key={service}
-              className="flex items-center gap-2 p-2 rounded bg-black text-white cursor-pointer"
+              className="flex items-center gap-2 p-2 rounded  text-white cursor-pointer"
             >
               <input
                 type="checkbox"
@@ -154,7 +154,7 @@ export default function ContactUs() {
                 onChange={() => handleCheckboxChange(service)}
                 className="accent-secondary w-4 h-4"
               />
-              <span > {service}</span>
+              <span className="text-md font-semibold"> {service}</span>
             </label>
           ))}
         </div>

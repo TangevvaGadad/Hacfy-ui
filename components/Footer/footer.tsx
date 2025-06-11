@@ -84,11 +84,11 @@ export default function FooterDemo() {
             </div>
 
             <div>
-              <div className="  mt-2 md:mt-0 hover:text-[#ff8533]">
+              <div className="  mt-2 md:mt-0 hover:text-secondary">
                 <div>
                   <Link
                     href="/UserTerma"
-                    className="hover:text-[#ff8533]"
+                    className="hover:text-secondary"
                     style={{ color: "var(--primary-blue)" }}
                   >
                     User Terms & Conditions
@@ -96,7 +96,7 @@ export default function FooterDemo() {
                 </div>
                 <Link
                   href="/UserTerma"
-                  className="hover:text-[#ff8533]"
+                  className="hover:text-secondary"
                   style={{ color: "var(--primary-blue)" }}
                 >
                   Privacy Policy

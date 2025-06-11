@@ -1,3 +1,4 @@
+import Hero2 from "@/components/AboveHero/hero2";
 import CareerSection from "@/components/career/career";
 import ContactUs from "@/components/contact/contact";
 import FaqSection from "@/components/faq/faq";
@@ -11,6 +12,9 @@ import WhyUs from "@/components/whyus/whyus";
 export default function Home() {
   return (
     <>
+    <div className="h-screen flex flex-col justify-center" id="home">
+        <Hero2 />
+      </div>
       <div className="h-screen flex flex-col justify-center" id="home">
         <Hero />
       </div>

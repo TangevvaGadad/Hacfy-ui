@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${poppins.variable} antialiased bg-primary`}
+        className={` ${poppins.variable} antialiased bg-primary scroll-smooth`}
       >
        <div className="flex flex-col min-h-screen">
       <Navbarlogo/>
