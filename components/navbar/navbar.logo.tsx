@@ -63,7 +63,7 @@ export function Navbarlogo() {
         {/* Desktop Nav Items */}
         <div className="hidden md:flex space-x-8 items-center relative">
           <a
-            href="#about"
+            href="/"
             className="text-lg font-bold text-gray-700 hover:text-red-600"
           >
             Home
@@ -71,11 +71,9 @@ export function Navbarlogo() {
           <Link href="/about" className="text-lg font-bold text-gray-700 hover:text-red-600">
             About
           </Link>
-          <a href="#services" className="text-lg font-bold text-gray-700 hover:text-red-600">
-            Services
-          </a>
+        
           <a href="#contact" className="text-lg font-bold text-gray-700 hover:text-red-600">Contact</a>
-          </a>
+      
 
           {/* Services Menu */}
           <div
@@ -203,12 +201,6 @@ export function Navbarlogo() {
             )}
           </div>
 
-          <a
-            href="#contact"
-            className="text-lg font-bold text-gray-700 hover:text-red-600"
-          >
-            Contact
-          </a>
         </div>
 
         {/* Right Logo */}
