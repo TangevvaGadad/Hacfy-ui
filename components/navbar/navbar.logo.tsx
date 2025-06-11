@@ -24,9 +24,9 @@ export function Navbarlogo() {
         <a href="#about" className="text-lg font-bold text-gray-700 hover:text-red-600  ">
           Home
           </a>
-          <a href="#about" className="text-lg font-bold text-gray-700 hover:text-red-600">
+          <Link href="/about" className="text-lg font-bold text-gray-700 hover:text-red-600">
             About
-          </a>
+          </Link>
           <a href="#services" className="text-lg font-bold text-gray-700 hover:text-red-600">
             Services
           </a>
