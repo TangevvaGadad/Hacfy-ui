@@ -73,7 +73,7 @@ export function Navbarlogo() {
           </Link>
         
           <a href="#contact" className="text-lg font-bold text-gray-700 hover:text-red-600">Contact</a>
-      
+
 
           {/* Services Menu */}
           <div
@@ -263,36 +263,6 @@ export function Navbarlogo() {
                 />
               </svg>
             </button>
-
-            <div className="flex flex-col items-start space-y-4 mt-12">
-              <a href="#">
-                <Image
-                  src="/images/logo.webp"
-                  alt="Sidebar Logo"
-                  width={150}
-                  height={100}
-                  quality={100}
-                />
-              </a>
-              <a
-                href="#about"
-                className="text-lg font-bold text-gray-700 hover:text-gray-900"
-              >
-                About
-              </a>
-              <a
-                href="#services"
-                className="text-lg font-bold text-gray-700 hover:text-gray-900"
-              >
-                Services
-              </a>
-              <a
-                href="#contact"
-                className="text-lg font-bold text-gray-700 hover:text-gray-900"
-              >
-                Contact
-              </a>
-            </div>
           </div>
         </div>
       )}
