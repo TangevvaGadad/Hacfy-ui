@@ -77,8 +77,8 @@ const data: Record<string, PageData> = {
     image: "/api-hero-3.png",
     heading2: "Our Methodology",
     heading3: "Why Is API Penetration Testing Important?",
-    image2: "/api-hero-1.png",
-    image3: "/api-hero-2.png",
+    image2: "/api-1.png",
+    image3: "/api-2.png",
     extraSection: {
       heading: "Why is API Pentesting Necessary?",
       points: [
@@ -170,13 +170,13 @@ const KnowMore: FC = () => {
   }
 
   return (
-    <div className="w-full bg-primary min-h-screen text-white p-4 sm:p-10 ">
+    <div className="w-full bg-primary min-h-screen text-secondary p-4 sm:p-10 ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20 mb-20 mt-10 md:mt-0">
         <div className="flex-1">
           <h1 className="text-secondary text-4xl font-bold mb-6">
             {pageData.heading}
           </h1>
-          <p className="text-white font-normal mb-4 text-lg text-balance">
+          <p className="text-gray-700 font-normal mb-4 text-lg text-balance">
             {pageData.content}
           </p>
           <button
@@ -196,7 +196,7 @@ const KnowMore: FC = () => {
         </div>
       </div>
 
-      <p className=" md:mx-50 mb-20 text-xl font-semibold">
+      <p className=" md:mx-50 mb-20 text-xl font-semibold text-gray-700">
         {pageData.subContent}
       </p>
 
@@ -213,7 +213,7 @@ const KnowMore: FC = () => {
                 {pageData.extraSection.points.map((point, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="text-secondary w-6 h-6 shrink-0" />
-                    <span className="text-lg text-white">{point}</span>
+                    <span className="text-lg text-gray-700">{point}</span>
                   </li>
                 ))}
               </ul>

@@ -1,34 +1,49 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import { motion } from "motion/react";
+import { LampContainer } from "../ui/lamp";
 import { Button } from "../ui/button";
+import { BackgroundBeams } from "../ui/background-beams";
 
 export default function Hero() {
   return (
-    <>
-      <section className="relative w-full h-screen bg-primary text-white flex items-center"  id="hero">
-        <div className="relative z-10 px-8 md:px-16 lg:px-32">
-          <h1 className="text-5xl md:text-8xl font-extrabold leading-tight">
-            A FUTURE <br />
-            SECURED
-          </h1>
-          <p className="mt-4 text-lg text-gray-300 max-w-2xl text-balance">
-            Our mission is to build a safer digital world by offering end-to-end
-            cybersecurity solutions. Whether you're a student, professional,
-            startup, or enterprise, our services are tailored to meet your
-            needs. From penetration testing to comprehensive security
-            consulting, we empower individuals and organizations to defend
-            against the evolving cyber threat landscape.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button className="bg-secondary text-white hover:bg-red-600 font-bold text-md pb-4 ">
-              Get a Free consultation
-            </Button>
-          </div>
-        </div>
 
-        <div className="hidden md:block  bg-[radial-gradient(ellipse_at_center,_#ffffff_6%,_#f0f0f0_8%,_transparent_65%)] bg-cover bg-center bg-no-repeat p-4">
-          <Image src="/hero1.png" alt="hero" width={1000} height={1000} />
+    <div className=" w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+       
+    <LampContainer className="rounded-none">
+      <motion.div
+        initial={{ opacity: 0.5, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className=" text-white py-4 bg-clip-text text-center text-4xl font-medium tracking-tight  md:text-7xl"
+      >
+        <h1 className="text-5xl md:text-8xl font-extrabold leading-tight mt-16">
+          A FUTURE <br />
+          SECURED
+        </h1>
+
+        <p className="mt-4 text-lg text-white max-w-7xl text-balance font-medium leading-8 tracking-wide">
+          Our mission is to build a safer digital world by offering end-to-end
+          cybersecurity solutions. Whether you're a student, professional,
+          startup, or enterprise, our services are tailored to meet your needs.
+          From penetration testing to comprehensive security consulting, we
+          empower individuals and organizations to defend against the evolving
+          cyber threat landscape.
+        </p>
+
+        <div className="mt-8 flex justify-center">
+          <Button className="px-6 py-3 text-lg border-2 text-secondary tracking-tight font-bold hover:text-white hover:bg-secondary">
+            Get a Free consultation
+          </Button>
         </div>
-      </section>
-    </>
+      </motion.div>
+    </LampContainer>
+      <BackgroundBeams />
+    </div>
+
   );
 }

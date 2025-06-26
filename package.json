@@ -13,14 +13,16 @@
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.18.1",
     "lucide-react": "^0.484.0",
-    "motion": "^12.16.0",
+    "mini-svg-data-uri": "^1.4.4",
+    "motion": "^12.18.1",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-phone-input-2": "^2.15.1",
-    "tailwind-merge": "^3.0.2",
+    "tailwind-merge": "^3.3.1",
     "tw-animate-css": "^1.2.4"
   },
   "devDependencies": {

@@ -34,7 +34,7 @@ export default function ContactUs() {
     e.preventDefault();
     setStatus("Sending...");
 
-    const trimmedPhone = phone.trim(); // ✅ Add this
+    const trimmedPhone = phone.trim(); 
 
     if (!fullName.trim() || !email.trim() || !trimmedPhone) {
       alert("Please fill in all required fields.");
@@ -74,7 +74,7 @@ export default function ContactUs() {
         setMessage("");
         setCheckedServices([]);
       }
-      setStatus(null); // ✅ Reset status after response
+      setStatus(null); 
     } catch (error) {
       alert("Error sending message. Please try again later.");
       setStatus(null);
@@ -86,7 +86,7 @@ export default function ContactUs() {
       onSubmit={handleSubmit}
       className="max-w-5xl w-full mx-auto px-4 sm:px-8 py-10 space-y-6"
     >
-      <h1 className="text-white text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
+      <h1 className="text-secondary text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
         Connect With HacFy
       </h1>
 
@@ -100,7 +100,7 @@ export default function ContactUs() {
             placeholder="Enter your full name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className="w-full border border-gray-600 bg-transparent p-2 rounded text-white"
+            className="w-full border border-gray-600 bg-transparent p-2 rounded text-gray-600"
             required
           />
         </div>
@@ -113,7 +113,7 @@ export default function ContactUs() {
             placeholder="Enter your work email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border border-gray-600 bg-transparent p-2 rounded text-white"
+            className="w-full border border-gray-600 bg-transparent p-2 rounded text-gray-600"
             required
           />
         </div>
@@ -126,7 +126,7 @@ export default function ContactUs() {
             placeholder="Enter your phone number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="w-full border border-gray-600 bg-transparent p-2 rounded text-white"
+            className="w-full border border-gray-600 bg-transparent p-2 rounded text-gray-600"
             required
           />
         </div>
@@ -138,7 +138,7 @@ export default function ContactUs() {
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {servicesList.map((service) => (
-            <label key={service} className="flex items-center gap-2 text-white">
+            <label key={service} className="flex items-center gap-2 text-gray-600">
               <input
                 type="checkbox"
                 value={service}
@@ -160,7 +160,7 @@ export default function ContactUs() {
           placeholder="Enter your message here"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full border border-gray-600 bg-transparent p-2 rounded h-28 text-white"
+          className="w-full border border-gray-600 bg-transparent p-2 rounded h-28 text-gray-600"
         />
       </div>
 

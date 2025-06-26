@@ -1,3 +1,4 @@
+import AboutUs from "@/components/about/aboutUs";
 import Hero2 from "@/components/AboveHero/hero2";
 import CareerSection from "@/components/career/career";
 import ContactUs from "@/components/contact/contact";
@@ -12,16 +13,16 @@ import WhyUs from "@/components/whyus/whyus";
 export default function Home() {
   return (
     <>
-    <div className="h-screen flex flex-col justify-center" id="home">
+      <div className="min-h-screen flex flex-col justify-center " id="main">
         <Hero2 />
       </div>
-      <div className="h-screen flex flex-col justify-center" id="home">
+      <div className="mb-30 flex flex-col justify-center" id="hero">
         <Hero />
       </div>
       <div>
         <StatsSection />
       </div>
-      <div className="mt-20">
+      <div className="mt-10">
         <WhyUs />
       </div>
       <div>
@@ -29,20 +30,11 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className="text-white text-5xl text-center font-bold mb-16">
+        <h1 className="text-secondary text-5xl text-center font-bold mb-16">
           Websites we have Secured
         </h1>
         <MarqueeDemo />
       </div>
-      {/* <div>
-        <ServiceSection />
-      </div>
-      <div className="mt-20">
-        <Internship />
-      </div> */}
-      {/* <div className="" id="about">
-        <AboutUs />
-      </div> */}
 
       <div>
         <CareerSection />
