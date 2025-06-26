@@ -81,8 +81,7 @@ export default function Component() {
 
             <Button className="mt-6 bg-secondary text-md font-bold hover:bg-secondary/80 ">
             <a href="https://cyberchetana.hacfy.com">Know More...</a>
-            </Button>
-          </CardContent>
+            </Button>          </CardContent>
           <BorderBeam duration={8} size={100} />
         </Card>
       </div>
