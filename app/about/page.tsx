@@ -61,7 +61,7 @@ export default function Component() {
               future for all.
             </p>
 
-            <p className="text-xl text-red-400 pt-5">
+            <p className="text-xl text-secondary pt-5">
               Focused on Karnataka, this mission-driven campaign is designed to:
             </p>
 

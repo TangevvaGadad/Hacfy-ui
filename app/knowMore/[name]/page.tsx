@@ -33,8 +33,8 @@ const data: Record<string, PageData> = {
       design, and deployment configuration.`,
     subContent: `At HacFy, we don’t just check the surface. We dive deep manually and with advanced tools to detect and demonstrate how a malicious actor might breach your systems. Our pentesting engagements are tailored to your business logic and application architecture, ensuring you receive actionable results, not just automated scan outputs.`,
     image: "/web-hero-3.png",
-    heading2: "Our Methodology",
-    heading3: "Why Is Web Application Penetration Testing Important?",
+    heading2: "Our Web Pentesting Methodology",
+    heading3: "Goals of Web Application Pentesting",
     image2: "/web-hero-1.png",
     image3: "/web-hero-2.png",
     extraSection: {
@@ -43,7 +43,7 @@ const data: Record<string, PageData> = {
         "Prevent unauthorized access to sensitive user data.",
         "Identify flaws before attackers do.",
         "During the development process as part of a secure development lifecycle.",
-        "Meet compliance requirements (ISO 27001, PCI-DSS, HIPAA, etc.",
+        "Meet compliance requirements (ISO 27001, PCI-DSS, HIPAA, etc.)",
         "Strengthen your internal DevSecOps processes.",
       ],
     },
@@ -54,8 +54,8 @@ const data: Record<string, PageData> = {
     content: `Cloud penetration testing is a specialized security assessment that evaluates the security posture of your cloud infrastructure, services, and applications. This testing identifies vulnerabilities in your cloud environment's configuration, access controls, network security, and integration points to help you secure your assets in AWS, Azure, Google Cloud, or other cloud platforms.`,
     subContent: `At HacFy, we go beyond conventional security scans. Our experts emulate real-world adversaries to test your cloud's defense layers, ensure identity protection, validate misconfiguration risks, and assess data isolation in multi-tenant environments.`,
     image: "/cloud-3.png",
-    heading2: "Our Methodology",
-    heading3: "Why Is Cloud Application Penetration Testing Important?",
+    heading2: "Our Cloud Pentesting Methodology",
+    heading3: "Goals of Cloud Penetration Testing",
     image2: "/cloud-1.png",
     image3: "/cloud-2.png",
     extraSection: {
@@ -72,11 +72,11 @@ const data: Record<string, PageData> = {
   "api-penetration-pentesting": {
     title: "API Penetration Pentesting",
     heading: "What Is API Penetration Testing?",
-    content: `API penetration testing is a specialized security assessment that identifies vulnerabilities in your Application Programming Interfaces (APIs). These interfaces, which facilitate communication between different software components, can contain security flaws that expose sensitive data or functionality. Our comprehensive testing evaluates authentication, authorization, input validation, business logic, and encryption in REST, SOAP, GraphQL, and other API implementations.`,
+    content: `API penetration testing is a specialized security assessment that identifies vulnerabilities in your Application Programming Interfaces (APIs). These interfaces, which facilitate communication between different software components, can contain security flaws that expose sensitive data or functionality. Our comprehensive testing evaluates authentication, authorization, input validation, business logic, and encryption in REST, SOAP, GraphQL , gRPC , and other API implementations.`,
     subContent: `At HacFy, we thoroughly test your APIs against real-world threat vectors to uncover authentication flaws, broken access controls, insecure data handling, and misconfigured endpoints—before attackers do.`,
     image: "/api-hero-3.png",
-    heading2: "Our Methodology",
-    heading3: "Why Is API Penetration Testing Important?",
+    heading2: "Our API Pentesting Methodology",
+    heading3: "Goals of API Penetration Testing",
     image2: "/api-hero-1.png",
     image3: "/api-hero-2.png",
     extraSection: {
@@ -95,8 +95,8 @@ const data: Record<string, PageData> = {
     content: `Network penetration testing is a comprehensive security assessment that evaluates your organization's network infrastructure for vulnerabilities and exploitable weaknesses. Our ethical hackers simulate real-world attacks against your network devices, servers, workstations, and security controls to identify security gaps before malicious actors can exploit them.`,
     subContent: `At HacFy, we conduct thorough network assessments that emulate real-world attacker tactics, techniques, and procedures (TTPs) to test your defenses, exploit weaknesses, and provide actionable recommendations.`,
     image: "/network-3.png",
-    heading2: "Our Methodology",
-    heading3: "Why Is Network  Penetration Testing Important?",
+    heading2: "Our Network Pentesting Methodology",
+    heading3: "Goals of Network Pentesting",
     image2: "/network-1.png",
     image3: "/network-2.png",
     extraSection: {
@@ -116,8 +116,8 @@ const data: Record<string, PageData> = {
     content: `Mobile application penetration testing is a comprehensive security assessment that identifies vulnerabilities in your iOS and Android applications. Our expert testers evaluate your mobile apps for security weaknesses that could compromise user data, backend systems, or app functionality. This testing covers client-side security, data storage, network communications, authentication mechanisms, and server-side API interactions.`,
     subContent: `At HacFy, we conduct both static and dynamic testing aligned with the OWASP Mobile Top 10 to ensure that your app is secure at every layer — from the client side to the server.`,
     image: "/mobile-3.png",
-    heading2: "Our Methodology",
-    heading3: "Why Is Mobile Application Penetration Testing Important?",
+    heading2: "Our Mobile Pentesting Methodology",
+    heading3: "Goals of Mobile Pentesting",
     image2: "/mobile-1.png",
     image3: "/mobile-2.png",
     extraSection: {
@@ -138,8 +138,8 @@ const data: Record<string, PageData> = {
     content: `IoT penetration testing is a specialized security assessment that evaluates the security of Internet of Things devices, their supporting infrastructure, and connected ecosystems. Our comprehensive testing identifies vulnerabilities across hardware, firmware, wireless`,
     subContent: `At HacFy, we simulate real-world attack scenarios to identify, exploit, and report weaknesses across all layers of your IoT ecosystem — from physical access to cloud integration.`,
     image: "/iot-3.png",
-    heading2: "Our Methodology",
-    heading3: "Why Is IoT Penetration Testing Important?",
+    heading2: "Our IoT Pentesting Methodology",
+    heading3: "Goals of IoT Penetration Testing",
     image2: "/iot-1.png",
     image3: "/iot-2.png",
     extraSection: {
@@ -236,7 +236,7 @@ const KnowMore: FC = () => {
       </div>
 
       <div className="h-full flex flex-col justify-center items-center mb-20">
-        <div className="text-secondary text-center text-2xl md:text-5xl font-bold mb-10 md:mb-20">
+        <div className="text-secondary text-center text-4xl md:text-6xl font-bold mb-10 md:mb-20">
           {pageData.heading3}
         </div>
         <Image

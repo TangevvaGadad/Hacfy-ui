@@ -63,7 +63,7 @@ export function Navbarlogo() {
         {/* Desktop Nav Items */}
         <div className="hidden md:flex space-x-8 items-center relative">
           <a
-            href="/`"
+            href="/"
             className="text-lg font-bold text-gray-700 hover:text-red-600"
           >
             Home
