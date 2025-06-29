@@ -6,7 +6,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from "re
 export default function FooterDemo() {
   return (
     <div className="">
-      <footer className="px-4 py-10 sm:px-8 text-white pb-10 mx-auto border-t rounded-2xl shadow-2xl">
+      <footer className="px-4 py-10 sm:px-8 text-gray-700 pb-10 mx-auto border-t rounded-2xl shadow-2xl">
         <div className="container mx-auto px-4 sm:px-8 lg:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {/* Logo & Description */}
@@ -32,16 +32,16 @@ export default function FooterDemo() {
             <div className="mx-0 lg:mx-10">
               <h3 className="font-semibold text-[var(--primary-blue)]">Company</h3>
               <ul className="mt-3 space-y-2 text-[var(--primary-blue)]">
-                <li className="hover:text-primary-hover cursor-pointer">
+                <li className="hover:text-secondary cursor-pointer">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="hover:text-primary-hover cursor-pointer">
+                <li className="hover:text-secondary cursor-pointer">
                   <Link href="/about">About Us</Link>
                 </li>
-                <li className="hover:text-primary-hover cursor-pointer">
+                <li className="hover:text-secondary cursor-pointer">
                   <Link href="/blog">Blogs</Link>
                 </li>
-                <li className="hover:text-primary-hover cursor-pointer">
+                <li className="hover:text-secondary cursor-pointer">
                   <Link href="/#pledge">Services</Link>
                 </li>
               </ul>
@@ -53,10 +53,10 @@ export default function FooterDemo() {
                 Contact
               </h3>
               <ul className="mt-3 space-y-2" style={{ color: "var(--primary-blue)" }}>
-                <li className="hover:text-primary-hover cursor-pointer">
+                <li className="hover:text-secondary cursor-pointer">
                   <Link href="mailto:info@hacfy.com">info@hacfy.com</Link>
                 </li>
-                <li className="hover:text-primary-hover cursor-pointer">
+                <li className="hover:text-secondary cursor-pointer">
                   <Link href="tel:+918660767853">+91 8660767853</Link>
                 </li>
               </ul>
