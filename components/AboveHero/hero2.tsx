@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { HeroHighlight, Highlight } from "../ui/hero-highlight";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { ArrowDownCircle, ArrowRightCircle, Link } from "lucide-react";
+import { ArrowDownCircle} from "lucide-react";
 import { Button } from "../ui/button";
 
 const words = `WHAT'S YOUR CYBERSECURITY CHALLENGE ?
