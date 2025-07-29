@@ -29,8 +29,8 @@ export default function Hero2() {
         leading-relaxed lg:leading-snug text-center mx-auto "
       >
         <TextGenerateEffect words={words} />
-        <Highlight className="text-white font-semibold text-3xl md:text-5xl px-6 py-2">
-          HacFy delivers it all.
+        <Highlight className="inline-block bg-secondary text-white text-xl md:text-2xl font-medium px-6 py-4 rounded-sm leading-snug text-center mx-auto w-full max-w-4xl shadow-md">
+          HacFy provides end-to-end solutions designed to address your specific security concerns with precision, efficiency, and expertise.
         </Highlight>
         <div className="mt-6">
           <a href="/#hero">

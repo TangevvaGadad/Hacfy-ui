@@ -9,6 +9,8 @@ import { StatsSection } from "@/components/numberRticker/numberTicker";
 import TestimonialSlider from "@/components/Testinomials/testinomials";
 import TrainingsSection from "@/components/trainings/training";
 import WhyUs from "@/components/whyus/whyus";
+import CTA from '@/components/CTA/cta';
+
 
 export default function Home() {
   return (
@@ -21,6 +23,9 @@ export default function Home() {
       </div>
       <div>
         <StatsSection />
+      </div>
+      <div className="mt-10">
+        <CTA />
       </div>
       <div className="mt-10">
         <WhyUs />
