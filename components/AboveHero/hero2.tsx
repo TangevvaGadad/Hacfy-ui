@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { ArrowDownCircle} from "lucide-react";
 import { Button } from "../ui/button";
 
-const words = `WHAT'S YOUR CYBERSECURITY CHALLENGE ?
+const words = `Facing a cybersecurity challenge?
 `;
 
 export default function Hero2() {
