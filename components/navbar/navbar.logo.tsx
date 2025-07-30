@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { X } from "lucide-react"
+import { ChevronDown, X } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 export function Navbarlogo() {
@@ -12,7 +12,6 @@ export function Navbarlogo() {
   const [clickedOpen, setClickedOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -30,7 +29,7 @@ export function Navbarlogo() {
   }, [pathname])
 
   useEffect(() => {
-    const handleKeyDown = (e: any) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setClickedOpen(false)
         setServicesOpen(false)
@@ -38,9 +37,7 @@ export function Navbarlogo() {
     }
 
     document.addEventListener("keydown", handleKeyDown)
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown)
-    }
+    return () => document.removeEventListener("keydown", handleKeyDown)
   }, [])
 
   const handleMouseEnter = () => {
@@ -97,11 +94,16 @@ export function Navbarlogo() {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="text-lg font-bold text-gray-700 hover:text-red-600"
+              className="flex items-center gap-1 text-lg font-bold text-gray-700 hover:text-red-600"
               onClick={handleClick}
               onDoubleClick={handleDoubleClick}
             >
               Services
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-300 ease-in-out ${
+                  servicesOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
             </button>
 
             {servicesOpen && (
@@ -180,10 +182,9 @@ export function Navbarlogo() {
           <div className="fixed inset-0 bg-black opacity-50" onClick={() => setIsSidebarOpen(false)} />
           <div className="relative bg-white w-64 h-full shadow-lg p-6">
             <button className="absolute top-4 right-4 text-gray-700" onClick={() => setIsSidebarOpen(false)}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <X className="w-6 h-6" />
             </button>
+            {/* Add your mobile links here if needed */}
           </div>
         </div>
       )}
