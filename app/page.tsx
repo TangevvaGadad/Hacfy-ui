@@ -1,5 +1,5 @@
 
-import Hero2 from "@/components/AboveHero/hero2";
+// import Hero2 from "@/components/AboveHero/hero2";
 import CareerSection from "@/components/career/career";
 import ContactUs from "@/components/contact/contact";
 import FaqSection from "@/components/faq/faq";
@@ -15,9 +15,9 @@ import CTA from '@/components/CTA/cta';
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-center " id="main">
+      {/* <div className="min-h-screen flex flex-col justify-center " id="main">
         <Hero2 />
-      </div>
+      </div> */}
       <div className="mb-30 flex flex-col justify-center" id="hero">
         <Hero />
       </div>
